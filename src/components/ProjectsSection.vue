@@ -113,7 +113,7 @@ const projects: Project[] = [
 
               <p class="text-slate-300 mb-4">{{ project.description }}</p>
 
-              <ul v-if="project.highlights" class="space-y-2 mb-6 flex-grow">
+              <ul v-if="project.highlights" class="space-y-2 mb-6 grow">
                 <li
                   v-for="(highlight, i) in project.highlights"
                   :key="i"
