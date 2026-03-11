@@ -159,31 +159,88 @@ const copyToClipboard = (text: string) => {
         </div>
 
         <div
-          class="text-center animate-on-scroll opacity-0 transition-all duration-700 delay-500 transform translate-y-10"
+          class="animate-on-scroll opacity-0 transition-all duration-700 delay-500 transform translate-y-10"
         >
           <div
-            class="inline-block rounded-2xl p-8 border border-rose-500/30"
+            class="relative rounded-2xl p-10 md:p-14 border border-rose-500/30 text-center overflow-hidden"
             style="
               background: linear-gradient(
-                to right,
-                rgba(244, 63, 94, 0.08),
-                rgba(236, 72, 153, 0.08)
+                135deg,
+                rgba(244, 63, 94, 0.1),
+                rgba(139, 92, 246, 0.08),
+                rgba(236, 72, 153, 0.1)
               );
             "
           >
-            <p class="text-slate-300 text-lg mb-4">
-              Available for freelance opportunities and full-time positions
-            </p>
-            <p class="text-slate-400 mb-6">
-              Location: Egypt | Open to remote work worldwide
-            </p>
-            <a
-              href="mailto:sherifaboraya24@gmail.com"
-              class="inline-block px-8 py-4 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-rose-500/30 transition-all duration-300 transform hover:scale-105"
-              style="background: linear-gradient(135deg, #f43f5e, #ec4899)"
-            >
-              Send Message
-            </a>
+            <!-- Decorative glow -->
+            <div
+              class="absolute -top-20 -right-20 w-60 h-60 bg-rose-500/10 rounded-full blur-3xl"
+            ></div>
+            <div
+              class="absolute -bottom-20 -left-20 w-60 h-60 bg-violet-500/10 rounded-full blur-3xl"
+            ></div>
+
+            <div class="relative z-10">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 mb-6"
+              >
+                <span
+                  class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"
+                ></span>
+                <span class="text-emerald-400 text-sm font-medium"
+                  >Available for hire</span
+                >
+              </div>
+
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">
+                Let's Build Something
+                <span class="text-gradient-rose">Amazing</span> Together
+              </h3>
+              <p class="text-slate-300 text-lg mb-2 max-w-xl mx-auto">
+                3+ years of frontend expertise, ready for your next challenge
+              </p>
+              <p class="text-slate-400 mb-8">
+                Based in Egypt · Open to remote worldwide · Freelance &
+                full-time
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+                <a
+                  href="mailto:sherifaboraya24@gmail.com"
+                  class="inline-flex items-center gap-2 px-8 py-4 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-rose-500/30 transition-all duration-300 transform hover:scale-105"
+                  style="background: linear-gradient(135deg, #f43f5e, #ec4899)"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Send Me a Message
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/sherif-aboraya"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-8 py-4 text-slate-200 rounded-xl font-semibold border border-slate-600 hover:border-rose-500/50 hover:bg-rose-500/10 transition-all duration-300 transform hover:scale-105"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

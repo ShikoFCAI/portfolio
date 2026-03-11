@@ -3,37 +3,105 @@ import { useScrollAnimation } from "../composables/useScrollAnimation";
 
 useScrollAnimation();
 
+interface Skill {
+  name: string;
+  icon?: string;
+}
+
 interface SkillCategory {
   title: string;
-  skills: string[];
+  skills: Skill[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Frameworks",
-    skills: ["Vue 3", "Nuxt 3/4", "Angular 18/19", "React"],
+    skills: [
+      {
+        name: "Vue 3",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      },
+      {
+        name: "Nuxt 3/4",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+      },
+      {
+        name: "Angular 18/19",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+      },
+      {
+        name: "React",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+    ],
   },
   {
     title: "Languages",
-    skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+    skills: [
+      {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "JavaScript (ES6+)",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "HTML5",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      },
+      {
+        name: "CSS3",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
+    ],
   },
   {
     title: "Styling & UI",
-    skills: ["Tailwind CSS", "Nuxt UI", "Vuetify", "ShadCN UI", "Bootstrap"],
+    skills: [
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      { name: "Nuxt UI" },
+      {
+        name: "Vuetify",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuetify/vuetify-original.svg",
+      },
+      { name: "ShadCN UI" },
+      {
+        name: "Bootstrap",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      },
+    ],
   },
   {
     title: "Tools & Platforms",
-    skills: ["Git", "Azure DevOps", "REST APIs", "Vite"],
+    skills: [
+      {
+        name: "Git",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      },
+      {
+        name: "Azure DevOps",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+      },
+      { name: "REST APIs" },
+      {
+        name: "Vite",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+      },
+    ],
   },
   {
     title: "Concepts",
     skills: [
-      "SPA",
-      "CSR",
-      "SSR",
-      "SSG",
-      "Component Architecture",
-      "Responsive Design",
+      { name: "SPA" },
+      { name: "CSR" },
+      { name: "SSR" },
+      { name: "SSG" },
+      { name: "Component Architecture" },
+      { name: "Responsive Design" },
     ],
   },
 ];
@@ -70,13 +138,19 @@ const skillCategories: SkillCategory[] = [
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="(skill, si) in category.skills"
-                  :key="skill"
-                  class="px-3 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm hover:bg-amber-500/20 hover:text-amber-300 transition-all duration-300"
+                  :key="skill.name"
+                  class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm hover:bg-amber-500/20 hover:text-amber-300 transition-all duration-300"
                   :style="{
                     animation: `float 3s ease-in-out ${si * 0.3}s infinite`,
                   }"
                 >
-                  {{ skill }}
+                  <img
+                    v-if="skill.icon"
+                    :src="skill.icon"
+                    :alt="skill.name"
+                    class="w-4 h-4"
+                  />
+                  {{ skill.name }}
                 </span>
               </div>
             </div>

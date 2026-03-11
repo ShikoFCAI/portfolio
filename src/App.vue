@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection.vue";
 import SkillsSection from "./components/SkillsSection.vue";
 import ContactSection from "./components/ContactSection.vue";
 import FooterSection from "./components/FooterSection.vue";
+import GitHubStats from "./components/GitHubStats.vue";
 import ScrollProgress from "./components/ScrollProgress.vue";
 import FloatingNav from "./components/FloatingNav.vue";
 </script>
@@ -17,6 +18,7 @@ import FloatingNav from "./components/FloatingNav.vue";
     <ExperienceSection />
     <ProjectsSection />
     <SkillsSection />
+    <GitHubStats />
     <ContactSection />
     <FooterSection />
   </div>
