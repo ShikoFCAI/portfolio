@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)" rx="8"/>
+  <rect x="150" y="30" width="500" height="390" rx="16" fill="rgba(0,0,0,0.2)"/>
+  <rect x="170" y="50" width="460" height="30" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <rect x="180" y="58" width="100" height="14" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="300" y="58" width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="400" y="58" width="80" height="14" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="170" y="100" width="460" height="200" rx="8" fill="rgba(255,255,255,0.05)"/>
+  <polygon points="400,150 340,250 460,250" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="400" cy="200" r="35" fill="rgba(255,255,255,0.06)"/>
+  <rect x="170" y="320" width="150" height="12" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="170" y="345" width="460" height="8" rx="2" fill="rgba(255,255,255,0.06)"/>
+  <rect x="170" y="360" width="300" height="8" rx="2" fill="rgba(255,255,255,0.04)"/>
+  <rect x="170" y="385" width="100" height="24" rx="12" fill="rgba(255,255,255,0.08)"/>
+  <rect x="290" y="385" width="100" height="24" rx="12" fill="rgba(255,255,255,0.06)"/>
+  <text x="400" y="435" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="13">Replace with actual screenshot</text>
+</svg>

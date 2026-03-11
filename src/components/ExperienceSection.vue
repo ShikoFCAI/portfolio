@@ -65,7 +65,7 @@ const experiences: Experience[] = [
         <h2
           class="text-4xl md:text-5xl font-bold text-center mb-4 animate-on-scroll opacity-0 transition-all duration-700 transform translate-y-10"
         >
-          Work <span class="text-gradient">Experience</span>
+          Work <span class="text-gradient-emerald">Experience</span>
         </h2>
         <p
           class="text-slate-400 text-center mb-16 animate-on-scroll opacity-0 transition-all duration-700 delay-100 transform translate-y-10"
@@ -81,13 +81,13 @@ const experiences: Experience[] = [
             :style="{ transitionDelay: `${(index + 2) * 100}ms` }"
           >
             <div
-              class="bg-slate-900/50 rounded-xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+              class="bg-slate-900/50 rounded-xl p-8 border border-slate-700 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10 gradient-border-animated"
             >
               <div
                 class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
               >
                 <div>
-                  <h3 class="text-2xl font-bold text-cyan-400 mb-2">
+                  <h3 class="text-2xl font-bold text-emerald-400 mb-2">
                     {{ exp.role }}
                   </h3>
                   <div class="flex gap-2 items-center">
@@ -126,7 +126,7 @@ const experiences: Experience[] = [
                   :key="i"
                   class="text-slate-300 flex items-start"
                 >
-                  <span class="text-cyan-400 mr-2">▹</span>
+                  <span class="text-emerald-400 mr-2">▹</span>
                   <span>{{ desc }}</span>
                 </li>
               </ul>
@@ -135,7 +135,7 @@ const experiences: Experience[] = [
                 <span
                   v-for="tech in exp.technologies"
                   :key="tech"
-                  class="px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full text-sm border border-cyan-500/30"
+                  class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm border border-emerald-500/30"
                 >
                   {{ tech }}
                 </span>

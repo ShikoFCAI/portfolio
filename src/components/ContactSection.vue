@@ -51,7 +51,7 @@ const copyToClipboard = (text: string) => {
         <h2
           class="text-4xl md:text-5xl font-bold text-center mb-4 animate-on-scroll opacity-0 transition-all duration-700 transform translate-y-10"
         >
-          Get In <span class="text-gradient">Touch</span>
+          Get In <span class="text-gradient-rose">Touch</span>
         </h2>
         <p
           class="text-slate-400 text-center mb-16 animate-on-scroll opacity-0 transition-all duration-700 delay-100 transform translate-y-10"
@@ -69,16 +69,16 @@ const copyToClipboard = (text: string) => {
             <a
               :href="contact.link"
               :target="contact.link.startsWith('http') ? '_blank' : undefined"
-              class="block bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group"
+              class="block bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-rose-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-rose-500/10 group"
             >
               <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
                   <div
-                    class="p-3 bg-cyan-500/10 rounded-lg group-hover:bg-cyan-500/20 transition-colors duration-300"
+                    class="p-3 bg-rose-500/10 rounded-lg group-hover:bg-rose-500/20 transition-colors duration-300"
                   >
                     <svg
                       v-if="contact.icon === 'email'"
-                      class="w-6 h-6 text-cyan-400"
+                      class="w-6 h-6 text-rose-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ const copyToClipboard = (text: string) => {
                     </svg>
                     <svg
                       v-if="contact.icon === 'phone'"
-                      class="w-6 h-6 text-cyan-400"
+                      class="w-6 h-6 text-rose-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ const copyToClipboard = (text: string) => {
                     </svg>
                     <svg
                       v-if="contact.icon === 'linkedin'"
-                      class="w-6 h-6 text-cyan-400"
+                      class="w-6 h-6 text-rose-400"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -116,7 +116,7 @@ const copyToClipboard = (text: string) => {
                     </svg>
                     <svg
                       v-if="contact.icon === 'github'"
-                      class="w-6 h-6 text-cyan-400"
+                      class="w-6 h-6 text-rose-400"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -128,7 +128,7 @@ const copyToClipboard = (text: string) => {
                   <div>
                     <p class="text-sm text-slate-400">{{ contact.label }}</p>
                     <p
-                      class="text-slate-200 font-medium group-hover:text-cyan-400 transition-colors duration-300"
+                      class="text-slate-200 font-medium group-hover:text-rose-400 transition-colors duration-300"
                     >
                       {{ contact.value }}
                     </p>
@@ -139,11 +139,11 @@ const copyToClipboard = (text: string) => {
                     v-if="
                       contact.label === 'Phone' || contact.label === 'Email'
                     "
-                    class="text-cyan-400 hover:text-cyan-300 transition-colors p-2"
+                    class="text-rose-400 hover:text-rose-300 transition-colors p-2"
                     @click.prevent="copyToClipboard(contact.value)"
                   >
                     <svg
-                      class="w-6 h-6 fill-current text-cyan-400"
+                      class="w-6 h-6 fill-current text-rose-400"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 -960 960 960"
                     >
@@ -162,7 +162,14 @@ const copyToClipboard = (text: string) => {
           class="text-center animate-on-scroll opacity-0 transition-all duration-700 delay-500 transform translate-y-10"
         >
           <div
-            class="inline-block bg-linear-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30"
+            class="inline-block rounded-2xl p-8 border border-rose-500/30"
+            style="
+              background: linear-gradient(
+                to right,
+                rgba(244, 63, 94, 0.08),
+                rgba(236, 72, 153, 0.08)
+              );
+            "
           >
             <p class="text-slate-300 text-lg mb-4">
               Available for freelance opportunities and full-time positions
@@ -172,7 +179,8 @@ const copyToClipboard = (text: string) => {
             </p>
             <a
               href="mailto:sherifaboraya24@gmail.com"
-              class="inline-block px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105"
+              class="inline-block px-8 py-4 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-rose-500/30 transition-all duration-300 transform hover:scale-105"
+              style="background: linear-gradient(135deg, #f43f5e, #ec4899)"
             >
               Send Message
             </a>
