@@ -59,6 +59,7 @@
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
+  pointer-events: none;
   background: conic-gradient(
     from var(--border-angle),
     #06b6d4,
